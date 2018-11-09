@@ -1,0 +1,24 @@
+name: publish
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - run: npm ci
+      - run: npm run build
+      - run: npm publish
+        env:
+          NPM_REGISTRY_AUTH_TOKEN: ${{ secrets.NPM_GITHUB_REGISTRY_READ_WRITE }}
