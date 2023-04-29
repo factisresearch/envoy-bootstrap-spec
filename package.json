@@ -1,6 +1,6 @@
 {
   "name": "@factisresearch/envoy-bootstrap-spec",
-  "version": "1.0.0-envoy1.26",
+  "version": "2.0.0-envoy1.26",
   "type": "module",
   "description": "Envoy bootstrap configuration as typescript type",
   "scripts": {
@@ -8,7 +8,9 @@
   },
   "files": [
     "index.js",
-    "index.ts"
+    "index.ts",
+    "json",
+    "ts"
   ],
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "@octokit/rest": "^19.0.7",
     "@types/node": "^18.15.11",
     "axios": "^1.3.5",
     "json-schema-to-typescript": "^12.0.0",
