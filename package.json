@@ -1,6 +1,6 @@
 {
   "name": "@factisresearch/envoy-bootstrap-spec",
-  "version": "2.0.0-envoy1.26",
+  "version": "2.1.0-envoy1.26",
   "type": "module",
   "description": "Envoy bootstrap configuration as typescript type",
   "scripts": {
